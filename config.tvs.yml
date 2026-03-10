@@ -1,5 +1,8 @@
 applicationTitle: GAMATE CABLE
-
+noise: 0.2
+shadowMask: aperture-grille
+bezel: flat
+startUnmuted: true
 
 osd:
   theme: sat2007
@@ -20,20 +23,34 @@ osd:
 # noSignalContent: # Optional. You can specify content to show when a channel is off the air.
 #   image: placeholders/no-signal.png
 
-defaultChannel: 2 # Required. The default channel to start on when visiting the page.
+defaultChannel: 1 # Required. The default channel to start on when visiting the page.
 
 channels: # starts a list of channels. Every channel below begins with a "-" as that lets YAML know we're defining a list.
 
 - number: 1 # Required. Every channel needs a unique number. Negative numbers indicate line inputs, so -1 will be displayed as "LINE 1". Channel 0 is displayed as the TV's "MENU".
   name: On Demand # Required. The name of the channel.
   abbr: ON # Required. An abbreviation for the channel; try to keep it short.
-  image: placeholders/channel-1.png # Channel content. If there's none the TV will play static. There are various content engines available with lots of different configurations. In this case it's an image.
-  backgroundAudio: placeholders/bgm-3.mp3 # Optional. You can add background audio to any channel. This works well with radio streams, but you could use any audio file that the browser supports too.
-
-# In YAML the indentation of things matters; keep it consistent and you should be good. In this file I'm using two spaces for tabs. Your editor may do things differently so watch out for that!
+  image: placeholders/channel-1.png
+  backgroundAudio: placeholders/bgm-3.mp3
 
 - number: 2
   name: VOLTIX
   abbr: VTX
   video: https://rhine.webchnl.live/memfs/a5ebeea5-d842-43ae-add9-290d59f5593e.m3u8
   icon: https://webchnl.com/assets/img/channelicons/voltix.png
+
+- number: 32
+  name: Newsfeed
+  abbr: NEWS
+  mix:
+    a:
+      image: https://rhine.webchnl.com/memfs/daad2183-472a-4a6f-ac37-a2934dfccac4.jpg
+    b:
+      feed-reader: # The feed reader engine allows you to display RSS feeds on the TV.
+        src: https://feeds.feedburner.com/goat # placeholder
+        title: Entertainment News
+        refreshInterval: 300 # Optional. The interval in seconds to refresh the feed. If not specified the feed won't refresh automatically.
+        scrollSpeed: 35 # Optional. The speed to scroll text, in pixels per second. Higher is faster.
+        scrollDelay: 6 # Optional. The delay in seconds before and after scrolling text.
+        backgroundImage: false # Optional. The default image will be displayed if this is set to false. Do this when using in a mix layout to change the background color for instance.
+        # textColor: orangered # The text color of the feed reader; this is used for the text color of feed items
