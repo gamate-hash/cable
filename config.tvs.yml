@@ -47,7 +47,7 @@ channels: # starts a list of channels. Every channel below begins with a "-" as 
       image: https://rhine.webchnl.com/memfs/daad2183-472a-4a6f-ac37-a2934dfccac4.jpg
     b:
       feed-reader: # The feed reader engine allows you to display RSS feeds on the TV.
-        src: https://feeds.feedburner.com/goat # placeholder
+        src: https://gamate-hash.github.io/feed.xml
         title: Entertainment News
         refreshInterval: 300 # Optional. The interval in seconds to refresh the feed. If not specified the feed won't refresh automatically.
         scrollSpeed: 35 # Optional. The speed to scroll text, in pixels per second. Higher is faster.
