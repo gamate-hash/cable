@@ -1,7 +1,7 @@
 applicationTitle: GAMATE CABLE
-noise: 0.2
 shadowMask: aperture-grille
-bezel: flat
+blur: false 
+bezel: flat 
 startUnmuted: true
 
 osd:
@@ -61,4 +61,6 @@ channels:
 - number: 4
   name: Desktop
   title: Desktop
-  iframe: https://windows96.net/?rootfs=https://file.garden/aUYIWVAKvQxCBY-_/zip/gamaterootfs.zip
+  iframe: 
+   src: https://windows96.net/?rootfs=https://file.garden/aUYIWVAKvQxCBY-_/zip/gamaterootfs.zip
+   allowInteraction: true
