@@ -100,10 +100,14 @@ channels:
   icon: https://file.garden/aUYIWVAKvQxCBY-_/channels/dtv-2015/851SonicTap.png
   
 - number: 8
-  title: YouTube
-  name: YouTube
-  icon: https://file.garden/aUYIWVAKvQxCBY-_/images/yt/xbox/everything/Logo_YouTube_Title.png
+  title: RTube
+  name: RTube
   iframe:
    src: https://gamate-hash.github.io/tv/
    allowInteraction: true
   
+- number: 9
+  title: Comedy Central
+  name: Comedy Central
+  video: https://gamate-hash.github.io/cable/tv.m3u8
+  icon: https://file.garden/aUYIWVAKvQxCBY-_/channels/dtv-2015/851SonicTap.png
